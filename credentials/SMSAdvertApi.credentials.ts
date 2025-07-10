@@ -5,8 +5,8 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class smsAdvertApi implements ICredentialType {
-	name = 'SMSAdvertAPI';
+export class SMSAdvertApi implements ICredentialType {
+	name = 'SMSAdvertApi';
 	displayName = 'SMSAdvert API';
 	properties: INodeProperties[] = [
 		{

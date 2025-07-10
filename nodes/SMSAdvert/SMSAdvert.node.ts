@@ -7,10 +7,10 @@ import {
     NodeConnectionType,
 	IRequestOptions,
 } from 'n8n-workflow';
-import { smsFields, SMSOperations } from './descriptions/SMSDescription';
+import { smsFields, SMSOperations } from './descriptions/SmsDescription';
 
 
-export class SMSAdvert implements INodeType {
+export class SmsAdvert implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
         displayName: 'SMSAdvert',
@@ -27,7 +27,7 @@ export class SMSAdvert implements INodeType {
         outputs: [NodeConnectionType.Main], 
 credentials: [
 	{
-		name: 'SMSAdvertAPI',
+		name: 'SMSAdvertApi',
 		required: true,
 	},
     
@@ -107,7 +107,7 @@ credentials: [
 
 					responseData = await this.helpers.requestWithAuthentication.call(
 						this,
-						'SMSAdvertAPI',
+						'SMSAdvertApi',
 						options,
 					);
 										returnData.push(responseData);
@@ -125,7 +125,7 @@ credentials: [
 
 					responseData = await this.helpers.requestWithAuthentication.call(
 						this,
-						'SMSAdvertAPI',
+						'SMSAdvertApi',
 						options,
 					);
 
@@ -143,7 +143,7 @@ credentials: [
 
 					responseData = await this.helpers.requestWithAuthentication.call(
 						this,
-						'SMSAdvertAPI',
+						'SMSAdvertApi',
 						options,
 					);
 
@@ -160,7 +160,7 @@ credentials: [
 
 	responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'SMSAdvertAPI',
+		'SMSAdvertApi',
 		options,
 	);
 
