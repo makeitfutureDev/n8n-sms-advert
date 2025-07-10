@@ -88,7 +88,7 @@ export const smsFields: INodeProperties[] = [
 	required: true,
 	options: [
 		{
-			name: 'smsAdvert network',
+			name: 'SmsAdvert network',
 			value: 'smsAdvert',
 		},
 		{
