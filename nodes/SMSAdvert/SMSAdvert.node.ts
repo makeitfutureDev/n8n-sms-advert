@@ -39,7 +39,7 @@ credentials: [
 	type: 'options',
 	options: [
 		{
-			name: 'Sms',
+			name: 'SMS',
 			value: 'sms',
 		},
 	],

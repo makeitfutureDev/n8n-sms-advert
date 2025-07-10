@@ -103,14 +103,13 @@ export const smsFields: INodeProperties[] = [
 			operation: ['textToPhoneNumber'],
 		},
 	},
-	default: undefined
+	default: 'smsAdverts'
 },
 
 {
 	displayName: 'Confirm Status Webhook',
 	name: 'confirmStatusWebhook',
 	type: 'string',
-	required: false,
 	placeholder: 'https://example.com/webhook',
 	description: 'Optional webhook URL to receive delivery confirmation',
 	displayOptions: {
