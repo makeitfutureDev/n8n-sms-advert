@@ -92,7 +92,7 @@ export const smsFields: INodeProperties[] = [
 			value: 'smsAdvert',
 		},
 		{
-			name: 'ownNumber',
+			name: 'OwnNumber',
 			value: 'ownNumber',
 		},
 	],
@@ -103,7 +103,7 @@ export const smsFields: INodeProperties[] = [
 			operation: ['textToPhoneNumber'],
 		},
 	},
-	default: 'smsAdverts'
+	default: 'smsAdvert'
 },
 
 {
