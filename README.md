@@ -46,3 +46,33 @@ Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/
 ## License
 
 [MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+
+## 📲 n8n-nodes-smsadvert
+* Official n8n node for SMSAdvert API — easily send SMS messages and manage your SMS accounts directly from your n8n workflows.
+
+✉️ Features
+✅ Send SMS messages to phone numbers using your own devices or the SMSAdvert network.
+✅ Get a list of your registered devices.
+✅ Check your current API message queue count.
+
+* ⚡ Fully integrated with n8n authentication.
+
+🚀 Installation
+npm install n8n-nodes-smsadvert
+After installation, restart n8n. The node will appear in your node list as SMSAdvert.
+
+🔐 Authentication
+The node uses API Key authentication.
+In n8n, create new credentials of type SMSAdvertAPI and add your API key from your SMSAdvert account.
+
+💬 Example Workflows
+Simple SMS blast
+Use an HTTP Request node to pull a list of numbers from a CRM or sheet.
+
+Connect to SMSAdvert node with Send a Message operation.
+
+Done! Bulk SMS to your audience.
+
+🧑‍💻 Contributing
+Pull requests are welcome!
+If you'd like to add new features or improve existing functionality, please open an issue first to discuss what you'd like to change.
