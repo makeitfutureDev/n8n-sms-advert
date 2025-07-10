@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-sms-advert",
   "version": "0.1.0",
   "description": "",
   "keywords": [
@@ -9,11 +9,11 @@
   "homepage": "",
   "author": {
     "name": "",
-    "email": ""
+    "email": "apps@makeitfuture.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/makeitfutureDev/n8n-sms-advert.git"
   },
   "engines": {
     "node": ">=20.15"
