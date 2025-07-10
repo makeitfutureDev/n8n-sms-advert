@@ -14,7 +14,8 @@ export class SMSAdvert implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
         displayName: 'SMSAdvert',
-        name: 'SMSAdvert',
+        name: 'smsAdvert',
+		subtitle: '={{ $parameter["operation"] + ": " + $parameter["resource"] }}',
         icon: 'file:smsadvert.svg',
         group: ['transform'],
         version: 1,

@@ -13,8 +13,9 @@
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": "apps@makeitfuture.com"
+    "name": "MakeItFuture",
+    "email": "apps@makeitfuture.com",
+    "description": "Official n8n community node for SMSAdvert API to send SMS messages and manage your SMSAdvert account."
   },
   "repository": {
     "type": "git",
