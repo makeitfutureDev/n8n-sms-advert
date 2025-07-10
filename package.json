@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-sms-advert",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Official n8n community node for SMSAdvert API to send SMS messages and manage your SMSAdvert account.",
   "keywords": [
     "n8n-community-node-package",
