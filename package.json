@@ -43,8 +43,7 @@
       "SMSAdvertApi.credentials.ts"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/SMSAdvert/SmsAdvert.node.ts"
     ]
   },
   "devDependencies": {
