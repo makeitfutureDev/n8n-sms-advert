@@ -40,10 +40,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/SMSAdvertApi.credentials.ts"
+      "dist/credentials/SMSAdvertApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/SMSAdvert/SmsAdvert.node.ts"
+      "dist/nodes/SMSAdvert/SMSAdvert.node.js"
     ]
   },
   "devDependencies": {

@@ -5,9 +5,9 @@ import {
 	INodeTypeDescription,
     IExecuteFunctions,
     NodeConnectionType,
-	IRequestOptions,
+	IHttpRequestOptions,
 } from 'n8n-workflow';
-import { smsFields, SMSOperations } from './descriptions/SmsDescription';
+import { smsFields, SMSOperations } from './descriptions/SMSDescription';
 
 
 export class SmsAdvert implements INodeType {
@@ -46,7 +46,7 @@ credentials: [
 	default: 'sms',
 	noDataExpression: true,
 	required: true,
-	description: 'Trimitere SMS prin dispozitive proprii',
+	description: 'Send SMS through own devices.',
 },
 
 ...SMSOperations,
@@ -100,71 +100,82 @@ credentials: [
 						method: 'POST',
 						body: data,
 						qs: qs,
-						uri: endpoint,
+						url: endpoint,
 						json: true,
-						} satisfies IRequestOptions;
-						console.log('options', options);
+						} satisfies IHttpRequestOptions;
 
-					responseData = await this.helpers.requestWithAuthentication.call(
+					responseData = await this.helpers.httpRequestWithAuthentication.call(
 						this,
 						'SMSAdvertApi',
 						options,
 					);
-										returnData.push(responseData);
+										returnData.push({
+											json: responseData,
+											pairedItem: { item: i }, 
+										  });
 									}
 								}
 
 
 			if (resource === 'sms') {
 				if (operation === 'getDevice') {
-					const options: IRequestOptions = {
+					const options: IHttpRequestOptions = {
 						method: 'GET',
-						uri: `${baseUrl}/Devices/list/all/`,
+						url: `${baseUrl}/Devices/list/all/`,
 						json: true,
 					};
 
-					responseData = await this.helpers.requestWithAuthentication.call(
+					responseData = await this.helpers.httpRequestWithAuthentication.call(
 						this,
 						'SMSAdvertApi',
 						options,
 					);
 
-					returnData.push({ json: responseData });
+					returnData.push({
+						json: responseData,
+						pairedItem: { item: i },
+					  });
 				}
 			}
 
 			if (resource === 'sms') {
 				if (operation === 'getAccountDetails') {
-					const options: IRequestOptions = {
+					const options: IHttpRequestOptions = {
 						method: 'GET',
-						uri: `${baseUrl}/user/account`,
+						url: `${baseUrl}/user/account`,
 						json: true,
 					};
 
-					responseData = await this.helpers.requestWithAuthentication.call(
+					responseData = await this.helpers.httpRequestWithAuthentication.call(
 						this,
 						'SMSAdvertApi',
 						options,
 					);
 
-					returnData.push({ json: responseData });
+					returnData.push({
+						json: responseData,
+						pairedItem: { item: i }, 
+					  });
 				}
 			}
 			if(resource === "sms"){
 				if (operation === 'getApiQueue') {
-	const options: IRequestOptions = {
+	const options: IHttpRequestOptions = {
 		method: 'GET',
-		uri: `${baseUrl}/messagequeue/count/api`,
+		url: `${baseUrl}/messagequeue/count/api`,
 		json: true,
 	};
 
-	responseData = await this.helpers.requestWithAuthentication.call(
+	responseData = await this.helpers.httpRequestWithAuthentication.call(
 		this,
 		'SMSAdvertApi',
 		options,
 	);
-
-	returnData.push({ json: responseData });
+	
+	returnData.push({
+		json: responseData,
+		pairedItem: { item: i }, 
+	  });
 }
 
 			}
