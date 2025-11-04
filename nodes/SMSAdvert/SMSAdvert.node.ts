@@ -7,7 +7,7 @@ import {
     NodeConnectionType,
 	IHttpRequestOptions,
 } from 'n8n-workflow';
-import { smsFields, SMSOperations } from './descriptions/SMSDescription';
+import { smsFields, SMSOperations } from './descriptions/SMDescription';
 
 
 export class SmsAdvert implements INodeType {
@@ -46,7 +46,7 @@ credentials: [
 	default: 'sms',
 	noDataExpression: true,
 	required: true,
-	description: 'Send SMS through own devices.',
+	description: 'Send SMS through own devices',
 },
 
 ...SMSOperations,
@@ -171,7 +171,7 @@ credentials: [
 		'SMSAdvertApi',
 		options,
 	);
-	
+
 	returnData.push({
 		json: responseData,
 		pairedItem: { item: i }, 
