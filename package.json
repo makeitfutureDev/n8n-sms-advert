@@ -30,7 +30,7 @@
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run lint --config .eslintrc.prepublish.js nodes credentials package.json"
+    "prepublishOnly": "npm run build && eslint --config .eslintrc.prepublish.js nodes credentials package.json"
   },
   "files": [
     "dist",
@@ -43,7 +43,7 @@
       "dist/credentials/SMSAdvertApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/SMSAdvert/SMSAdvert.node.js"
+      "dist/nodes/SMSAdvert/SmsAdvert.node.js"
     ]
   },
   "devDependencies": {
