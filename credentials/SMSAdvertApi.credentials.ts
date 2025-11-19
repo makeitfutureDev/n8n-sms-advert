@@ -6,7 +6,7 @@ import {
 } from 'n8n-workflow';
 
 export class SMSAdvertApi implements ICredentialType {
-	name = 'smsAdvertApi';
+	name = 'SMSAdvertApi';
 	displayName = 'SMSAdvert API';
 	properties: INodeProperties[] = [
 		{
@@ -15,8 +15,8 @@ export class SMSAdvertApi implements ICredentialType {
 			type: 'string',
 			default: '',
 			typeOptions: {
-		password: true,
-	},
+				password: true,
+			},
 		},
 	];
 
@@ -36,5 +36,4 @@ export class SMSAdvertApi implements ICredentialType {
 		},
 	};
 	documentationUrl = 'https://www.smsadvert.ro/api/';
-
 }
