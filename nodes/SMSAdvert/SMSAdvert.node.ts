@@ -27,7 +27,7 @@ export class SmsAdvert implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'SMSAdvertApi',
+				name: 'smsAdvertApi',
 				required: true,
 			},
 		],
@@ -108,7 +108,7 @@ export class SmsAdvert implements INodeType {
 
 						responseData = await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'SMSAdvertApi',
+							'smsAdvertApi',
 							options,
 						);
 						returnData.push({
@@ -128,7 +128,7 @@ export class SmsAdvert implements INodeType {
 
 						responseData = await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'SMSAdvertApi',
+							'smsAdvertApi',
 							options,
 						);
 
@@ -149,7 +149,7 @@ export class SmsAdvert implements INodeType {
 
 						responseData = await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'SMSAdvertApi',
+							'smsAdvertApi',
 							options,
 						);
 
@@ -169,7 +169,7 @@ export class SmsAdvert implements INodeType {
 
 						responseData = await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'SMSAdvertApi',
+							'smsAdvertApi',
 							options,
 						);
 
